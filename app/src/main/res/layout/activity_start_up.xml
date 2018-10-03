@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start_ut_background">
+
+    <Button
+        android:id="@+id/start_up_skip_bt"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:text="5s | 跳过"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/tv_input_box_style"
+        android:layout_alignParentRight ="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="60dp"/>
+
+</RelativeLayout>

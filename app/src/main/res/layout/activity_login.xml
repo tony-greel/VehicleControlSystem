@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/log_background">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/lon_logo"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="94dp"/>
+
+    <FrameLayout
+        android:layout_marginTop="247dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:background="@drawable/tv_input_box_style">
+           <EditText
+               android:inputType="text"
+               style="@style/MyEditText"
+               android:id="@+id/log_et_phone"
+               android:layout_width="match_parent"
+               android:layout_height="50dp"
+               android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+               android:textColorHint="#ffffff"
+               android:hint="@string/account"
+               android:maxLines="1"
+               android:singleLine="true"
+               android:background="@null"
+               android:layout_marginLeft="42dp" />
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/log_et_phone"
+               android:layout_marginTop="18dp"
+               android:layout_marginLeft="19dp"
+               android:layout_centerVertical="true"/>
+           <ImageView
+               android:id="@+id/log_img_delete_phone"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/log_et_delete"
+               android:layout_alignParentRight ="true"
+               android:layout_centerVertical="true"
+               android:layout_marginRight="27dp"
+               android:visibility="gone"  />
+
+       </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/tv_input_box_style"
+            android:layout_marginTop="70dp">
+            <EditText
+                style="@style/MyEditText"
+                android:id="@+id/log_et_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/password"
+                android:textColorHint="#ffffff"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:background="@null"
+                android:layout_marginLeft="42dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/log_et_password"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="19dp"
+                android:layout_centerVertical="true"/>
+            <ImageView
+                android:id="@+id/log_img_delete_password"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/log_et_delete"
+                android:layout_alignParentRight ="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="50dp"
+                android:visibility="gone" />
+            <ImageView
+                android:id="@+id/log_img_close_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/log_et_close"
+                android:layout_alignParentRight ="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="417dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/log_bt_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/log"
+            android:textColor="#038af9"
+            android:background="@drawable/bt_background_style"/>
+        <TextView
+            android:id="@+id/log_tv_forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="忘记密码"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="69dp" />
+        <TextView
+            android:id="@+id/log_tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="69dp"
+            android:layout_alignParentRight ="true" />
+    </RelativeLayout>
+
+</FrameLayout>
