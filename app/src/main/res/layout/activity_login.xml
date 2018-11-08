@@ -18,9 +18,10 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-       <RelativeLayout
+
+       <FrameLayout
            android:layout_width="match_parent"
-           android:layout_height="50dp"
+           android:layout_height="wrap_content"
            android:background="@drawable/tv_input_box_style">
            <EditText
                android:inputType="text"
@@ -47,16 +48,14 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:src="@drawable/log_et_delete"
-               android:layout_alignParentRight ="true"
-               android:layout_centerVertical="true"
+               android:layout_gravity="center|right"
                android:layout_marginRight="27dp"
-               android:visibility="gone"  />
+               android:visibility="gone" />
+       </FrameLayout>
 
-       </RelativeLayout>
-
-        <RelativeLayout
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/tv_input_box_style"
             android:layout_marginTop="70dp">
             <EditText
@@ -92,10 +91,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/log_et_close"
-                android:layout_alignParentRight ="true"
-                android:layout_centerVertical="true"
+                android:layout_gravity="center|right"
                 android:layout_marginRight="25dp" />
-        </RelativeLayout>
+        </FrameLayout>
     </FrameLayout>
 
     <RelativeLayout
@@ -113,6 +111,7 @@
             android:textColor="#038af9"
             android:background="@drawable/bt_background_style"/>
         <TextView
+            android:padding="10dp"
             android:id="@+id/log_tv_forget_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -120,6 +119,7 @@
             android:textColor="#FFFFFF"
             android:layout_marginTop="69dp" />
         <TextView
+            android:padding="10dp"
             android:id="@+id/log_tv_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

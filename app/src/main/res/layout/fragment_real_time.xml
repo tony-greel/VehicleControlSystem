@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:elevation="5dp"
+        android:background="@drawable/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <ImageView
+            android:padding="10dp"
+            android:id="@+id/real_time_img_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_return"
+            android:layout_marginTop="27dp"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="实时监控"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
+        <ImageView
+            android:padding="10dp"
+            android:id="@+id/real_time_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/real_time_car"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="12dp"/>
+    </FrameLayout>
+    <com.amap.api.maps.TextureMapView
+        android:id="@+id/real_time_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"/>
+</FrameLayout>

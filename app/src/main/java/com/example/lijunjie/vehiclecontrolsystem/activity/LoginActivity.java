@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.lijunjie.vehiclecontrolsystem.MainActivity;
 import com.example.lijunjie.vehiclecontrolsystem.R;
 import com.example.lijunjie.vehiclecontrolsystem.base.activity.BaseRequestActivity;
 import com.example.lijunjie.vehiclecontrolsystem.base.util.InputBoxUtil;
@@ -64,13 +65,14 @@ public class LoginActivity extends BaseRequestActivity<UserBean>{
                 InputBoxUtil.imgPasswordDisappearMonitor(logEtPassword,logImgClosePassword);
                 break;
             case R.id.log_bt_login:
-                startRequest();
+//                startRequest();
+                goToOtherActivity(MainActivity.class, true);
                 break;
             case R.id.log_tv_forget_password:
-                goToOtherActivity(ForgetPasswordActivity.class, true);
+                goToOtherActivity(ForgetPasswordActivity.class, false);
                 break;
             case R.id.log_tv_register:
-                goToOtherActivity(RegisterActivity.class, true);
+                 goToOtherActivity(RegisterActivity.class, false);
                 break;
             case R.id.log_img_delete_phone:
                 logEtPhone.setText("");

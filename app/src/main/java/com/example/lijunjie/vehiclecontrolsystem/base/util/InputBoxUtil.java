@@ -34,6 +34,26 @@ public class InputBoxUtil{
     }
 
     /**
+     * 显示密码图片监听
+     */
+    public static void imgPasswordDisappearMonitorColour(EditText input_box , ImageView picture) {
+        picture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (eyeOpen) {
+                    input_box.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                    picture.setImageResource(R.drawable.img_close);
+                    eyeOpen = false;
+                } else {
+                    input_box.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                    picture.setImageResource(R.drawable.img_open);
+                    eyeOpen = true;
+                }
+            }
+        });
+    }
+
+    /**
      * 输入框判断监听
      */
     public static void initView(EditText input_box , ImageView picture) {

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:elevation="5dp"
+        android:background="@drawable/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <TextView
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="地图导航"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
+    </FrameLayout>
+
+    <com.amap.api.maps.TextureMapView
+        android:id="@+id/navigation_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/navigation_search">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/navigation_search_img"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/navigation_et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="目的地"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="50dp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:background="@null"/>
+
+    </FrameLayout>
+</FrameLayout>

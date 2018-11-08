@@ -59,7 +59,6 @@ public class RegisterActivity extends BaseRequestActivity<UserBean> {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.register_img_return:
-                goToOtherActivity(LoginActivity.class, true);
                 finish();
                 break;
             case R.id.register_img_delete_phone:

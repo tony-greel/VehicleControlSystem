@@ -8,7 +8,7 @@
     android:id="@+id/toolbar"
     app:titleTextAppearance="@style/toolbar_title"
     app:layout_collapseMode="pin"
-    android:background="@drawable/log_background"
-    android:layout_height="?attr/actionBarSize">
+    android:background="@drawable/main_toolbar"
+    android:layout_height="75dp">
 
 </android.support.v7.widget.Toolbar>

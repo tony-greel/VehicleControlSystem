@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5">
+
+    <FrameLayout
+        android:elevation="5dp"
+        android:background="@drawable/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <ImageView
+            android:padding="10dp"
+            android:id="@+id/my_car_img_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_return"
+            android:layout_marginTop="27dp"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="我的车辆"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
+        <ImageView
+            android:padding="10dp"
+            android:id="@+id/my_car_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/my_car_add"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="12dp"/>
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_car_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp">
+    </android.support.v7.widget.RecyclerView>
+
+</FrameLayout>

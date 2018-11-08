@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/my_vehicles_deletion"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="31dp"
+        android:descendantFocusability="beforeDescendants"
+        android:background="@drawable/itme_background">
+        <TextView
+            android:id="@+id/my_vehicles_license_plate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="湘C4RM09"
+            android:textColor="#0f81f4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/my_vehicles_vehicle_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大众~朗逸"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"/>
+        <TextView
+            android:id="@+id/my_vehicles_vehicle_colour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="白色"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

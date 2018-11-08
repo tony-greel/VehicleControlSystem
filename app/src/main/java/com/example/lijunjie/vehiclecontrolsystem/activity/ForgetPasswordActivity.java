@@ -47,7 +47,6 @@ public class ForgetPasswordActivity extends BaseRequestActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.forget_password_img_return:
-                goToOtherActivity(LoginActivity.class, true);
                 finish();
                 break;
             case R.id.forget_password_img_delete_phone:
@@ -57,8 +56,7 @@ public class ForgetPasswordActivity extends BaseRequestActivity {
                 mCountDownTimerUtils.start();
                 break;
             case R.id.forget_password_bt:
-                goToOtherActivity(ResetPasswordActivity.class, true);
-
+                goToOtherActivity(ResetPasswordActivity.class, false);
                 break;
         }
     }
