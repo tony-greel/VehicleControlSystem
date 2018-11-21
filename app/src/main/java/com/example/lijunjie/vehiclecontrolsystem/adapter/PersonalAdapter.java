@@ -1,4 +1,5 @@
 package com.example.lijunjie.vehiclecontrolsystem.adapter;
+import android.app.Dialog;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +11,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.example.lijunjie.vehiclecontrolsystem.R;
 import com.example.lijunjie.vehiclecontrolsystem.base.listener.OnItemClickListener;
+import com.example.lijunjie.vehiclecontrolsystem.base.view.CommomDialog;
 import com.example.lijunjie.vehiclecontrolsystem.bean.PersonalVehicleBean;
 
 import java.util.List;
@@ -65,6 +67,18 @@ public class PersonalAdapter extends RecyclerView.Adapter<PersonalAdapter.Person
             carColour = (TextView)itemView.findViewById(R.id.my_vehicles_vehicle_colour);
             my_vehicles_deletion = (RelativeLayout)itemView.findViewById(R.id.my_vehicles_deletion);
 
+            my_vehicles_deletion.setOnLongClickListener(new View.OnLongClickListener() {
+
+                private void onClick(Dialog dialog, boolean confirm){
+
+                }
+                @Override
+                public boolean onLongClick(View v) {
+                    new CommomDialog(mContext, R.style.dialog, "您确定删除此车辆信息？",
+                            this::onClick).show();
+                    return true;
+                }
+            });
         }
     }
 }

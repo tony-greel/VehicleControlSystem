@@ -16,6 +16,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * 忘记密码
+ */
 public class ForgetPasswordActivity extends BaseRequestActivity {
 
 

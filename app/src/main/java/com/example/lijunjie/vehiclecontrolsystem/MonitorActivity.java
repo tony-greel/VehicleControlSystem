@@ -14,6 +14,7 @@ import com.example.lijunjie.vehiclecontrolsystem.activity.fragment.monitor.Stati
 import com.example.lijunjie.vehiclecontrolsystem.adapter.MyPagerAdapter;
 import com.example.lijunjie.vehiclecontrolsystem.base.activity.BaseActivity;
 import com.example.lijunjie.vehiclecontrolsystem.base.fragment.BaseFragment;
+import com.example.lijunjie.vehiclecontrolsystem.base.util.GuideViewUtil;
 import com.example.lijunjie.vehiclecontrolsystem.base.view.MonitorViewPager;
 
 import java.util.ArrayList;
@@ -42,6 +43,7 @@ public class MonitorActivity extends BaseActivity {
 
     private List<BaseFragment> list;
     private MyPagerAdapter vp_adapter;
+
 
     @Override
     protected int getContentViewId() {
@@ -142,5 +144,7 @@ public class MonitorActivity extends BaseActivity {
                 break;
         }
     }
+
+
 
 }

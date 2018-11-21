@@ -1,17 +1,12 @@
 package com.example.lijunjie.vehiclecontrolsystem.activity.fragment;
-
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.lijunjie.vehiclecontrolsystem.R;
 import com.example.lijunjie.vehiclecontrolsystem.activity.personal.AboutActivity;
 import com.example.lijunjie.vehiclecontrolsystem.activity.personal.CarControlActivity;
@@ -23,17 +18,16 @@ import com.example.lijunjie.vehiclecontrolsystem.activity.personal.PhoneActivity
 import com.example.lijunjie.vehiclecontrolsystem.activity.personal.account.SecurityActivity;
 import com.example.lijunjie.vehiclecontrolsystem.adapter.PersonalAdapter;
 import com.example.lijunjie.vehiclecontrolsystem.base.fragment.BaseFragment;
-import com.example.lijunjie.vehiclecontrolsystem.base.listener.OnItemClickListener;
 import com.example.lijunjie.vehiclecontrolsystem.bean.PersonalVehicleBean;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
-
+/**
+ * 个人界面
+ */
 public class PersonalFragment extends BaseFragment {
 
     @BindView(R.id.personal_img_head_portrait) ImageView personalImgHeadPortrait;

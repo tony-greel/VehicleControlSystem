@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/iv_exit"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/cancel"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="30dp"
+        android:text="车控密码"
+        android:textSize="17dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/iv_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:text="忘记密码"/>
+
+    <com.example.lijunjie.vehiclecontrolsystem.base.view.PwdEditText
+        android:id="@+id/et_input"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/iv_exit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:pwdCount="6"
+        app:style="roundRectangle" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#000000"
+        android:layout_marginTop="154dp"/>
+
+
+    <com.example.lijunjie.vehiclecontrolsystem.base.view.PwdKeyboardView
+        android:id="@+id/key_board"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_input"
+        android:layout_marginTop="40dp"
+        android:background="#919191"
+        android:keepScreenOn="true"
+        android:keyBackground="@drawable/selector_key_board"
+        android:keyTextColor="@android:color/black"
+        android:keyTextSize="26sp"
+        android:shadowRadius="0" />
+
+
+</RelativeLayout>

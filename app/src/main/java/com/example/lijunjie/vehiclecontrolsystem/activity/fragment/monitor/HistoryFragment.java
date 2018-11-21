@@ -1,8 +1,11 @@
 package com.example.lijunjie.vehiclecontrolsystem.activity.fragment.monitor;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.amap.api.maps.AMap;
@@ -11,12 +14,17 @@ import com.bigkoo.pickerview.builder.TimePickerBuilder;
 import com.bigkoo.pickerview.listener.OnTimeSelectListener;
 import com.bigkoo.pickerview.view.TimePickerView;
 import com.example.lijunjie.vehiclecontrolsystem.R;
+import com.example.lijunjie.vehiclecontrolsystem.adapter.ListViewAdapter;
 import com.example.lijunjie.vehiclecontrolsystem.base.fragment.BaseFragment;
 import com.example.lijunjie.vehiclecontrolsystem.base.util.DateTimeHelper;
+import com.example.lijunjie.vehiclecontrolsystem.base.util.DisplayUtil;
+import com.example.lijunjie.vehiclecontrolsystem.bean.MyCarBean;
 
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -39,6 +47,9 @@ public class HistoryFragment extends BaseFragment {
     private AMap historyAMap;
     private TimePickerView mStartDatePickerView;
 
+    private ListViewAdapter mListViewAdapter;
+    private ListView mPopListView;
+    private List<MyCarBean> mData=new ArrayList<>();
 
     @Override
     protected int getLayoutId() {
@@ -51,6 +62,14 @@ public class HistoryFragment extends BaseFragment {
         historyMap.onCreate(savedInstanceState);//显示地图
         initStartTimePicker();
         initEvents();
+        initialization();
+    }
+
+    private void initialization() {
+        for (int i = 1; i <= 50; i++) {
+            MyCarBean myCarBean = new MyCarBean("湘B123TC",R.drawable.itme_cer);
+            mData.add(myCarBean);
+        }
     }
 
     @OnClick({R.id.history_img_return, R.id.history_car, R.id.history_map, R.id.history_date, R.id.history_query})
@@ -60,6 +79,7 @@ public class HistoryFragment extends BaseFragment {
                 getActivity().finish();
                 break;
             case R.id.history_car:
+                showPopupWindow();
                 break;
             case R.id.history_map:
                 break;
@@ -68,6 +88,21 @@ public class HistoryFragment extends BaseFragment {
             case R.id.history_query:
                 break;
         }
+    }
+
+    private void showPopupWindow() {
+        View view = View.inflate(getContext(), R.layout.popup_window, null);
+        mPopListView = (ListView) view.findViewById(R.id.pop_list_view);
+
+        PopupWindow popupWindow = new PopupWindow(view, DisplayUtil.dip2px(getContext(), 150),
+                DisplayUtil.dip2px(getContext(), 240), true);
+        popupWindow.setOutsideTouchable(true);
+        popupWindow.setFocusable(true);
+        popupWindow.setBackgroundDrawable(new BitmapDrawable());
+        popupWindow.update();
+        popupWindow.showAsDropDown(historyCar, DisplayUtil.dip2px(getContext(), 50), 15);
+        mListViewAdapter = new ListViewAdapter(getContext(),mData,popupWindow);
+        mPopListView.setAdapter(mListViewAdapter);
     }
 
     /**初始化开始日期选择器控件*/
@@ -89,7 +124,7 @@ public class HistoryFragment extends BaseFragment {
             @Override
             public void onTimeSelect(Date date, View v) {//选中事件回调
                 // 这里回调过来的v,就是show()方法里面所添加的 View 参数，如果show的时候没有添加参数，v则为null
-                historyDate.setText(DateTimeHelper.formatToString(date,"yyyy-MM-dd"));
+                historyDate.setText(DateTimeHelper.formatToString(date,"                yyyy-MM-dd"));
             }
         })
                 .setDecorView((RelativeLayout)getActivity().findViewById(R.id.activity_rootview))//必须是RelativeLayout，不设置setDecorView的话，底部虚拟导航栏会显示在弹出的选择器区域
@@ -117,7 +152,6 @@ public class HistoryFragment extends BaseFragment {
         //开始日期的下拉菜单点击事件
         historyDate.setOnClickListener(view -> mStartDatePickerView.show());
     }
-
 
     @Override
     public void onDestroyView() {
@@ -155,4 +189,5 @@ public class HistoryFragment extends BaseFragment {
         super.onDestroy();
 
     }
+
 }

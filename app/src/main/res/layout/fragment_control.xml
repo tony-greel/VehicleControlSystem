@@ -53,7 +53,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="40dp">
         <ImageView
             android:id="@+id/center_refrigeration"
             android:layout_width="wrap_content"
@@ -72,12 +72,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:layout_marginTop="60dp">
+        android:layout_marginTop="50dp">
         <SeekBar
             android:id="@+id/center_progress_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:progressDrawable="#FFFFFF"
             android:max="30"
             android:progress="0" />
     </FrameLayout>
@@ -129,4 +128,17 @@
             android:layout_marginRight="60dp"
             android:layout_gravity="center|right"/>
     </FrameLayout>
+
+    <com.example.lijunjie.vehiclecontrolsystem.base.view.PwdKeyboardView
+        android:id="@+id/key_board"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#919191"
+        android:keepScreenOn="true"
+        android:keyBackground="@drawable/selector_key_board"
+        android:keyTextColor="@android:color/black"
+        android:keyTextSize="26sp"
+        android:shadowRadius="0"
+        android:visibility="gone" />
 </LinearLayout>

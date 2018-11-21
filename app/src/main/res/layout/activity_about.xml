@@ -41,9 +41,11 @@
 
     <FrameLayout
         android:id="@+id/about_fl_to_update"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/personal_ll_background"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_gravity="center">
         <TextView
             android:layout_width="wrap_content"
@@ -62,10 +64,12 @@
 
     <FrameLayout
         android:id="@+id/about_fl_official_network"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/personal_ll_background"
         android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="60dp">
         <TextView
             android:layout_width="wrap_content"
@@ -84,10 +88,12 @@
 
     <FrameLayout
         android:id="@+id/about_fl_help"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/personal_ll_background"
         android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="120dp">
         <TextView
             android:layout_width="wrap_content"
@@ -103,4 +109,18 @@
             android:layout_gravity="center|right"
             android:layout_marginRight="25dp"/>
     </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="海博瑞德公司所有版权-2017/2018"
+            android:layout_marginBottom="20dp"
+            android:textSize="11dp"
+            android:textColor="#000000"/>
+    </FrameLayout>
+
 </FrameLayout>

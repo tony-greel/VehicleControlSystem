@@ -1,14 +1,15 @@
 package com.example.lijunjie.vehiclecontrolsystem.activity.fragment;
-
 import android.support.annotation.NonNull;
 import android.view.View;
-
 import com.example.lijunjie.vehiclecontrolsystem.R;
 import com.example.lijunjie.vehiclecontrolsystem.base.fragment.BaseRequestFragment;
 import com.example.lijunjie.vehiclecontrolsystem.bean.BaseRequestBean;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
+/**
+ * 优惠生活
+ */
 public class LifeFragment extends BaseRequestFragment implements OnRefreshListener {
 
     @Override

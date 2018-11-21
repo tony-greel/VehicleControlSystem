@@ -46,10 +46,8 @@ dependencies {
     implementation 'org.greenrobot:greendao:3.2.2'
     implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
     implementation 'com.youth.banner:banner:1.4.9'
-
-    implementation files('libs/AMap3DMap_6.5.0_AMapNavi_6.4.0_AMapLocation_4.3.0_20181016.jar')
-
     implementation 'com.contrarywind:Android-PickerView:4.1.4'
-
+    implementation files('libs/AMap3DMap_6.5.0_AMapNavi_6.4.0_AMapLocation_4.3.0_20181016.jar')
+    implementation files('libs/Msc.jar')
 }
 

@@ -1,27 +1,22 @@
 package com.example.lijunjie.vehiclecontrolsystem.activity.fragment;
-
-import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-
 import com.example.lijunjie.vehiclecontrolsystem.MonitorActivity;
 import com.example.lijunjie.vehiclecontrolsystem.R;
-import com.example.lijunjie.vehiclecontrolsystem.activity.ForgetPasswordActivity;
 import com.example.lijunjie.vehiclecontrolsystem.base.fragment.BaseFragment;
+import com.example.lijunjie.vehiclecontrolsystem.base.util.GuideViewUtil;
 import com.example.lijunjie.vehiclecontrolsystem.model.HomePageModel;
 import com.youth.banner.Banner;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
-
+/**
+ * 车辆生活
+ */
 public class HomePageFragment extends BaseFragment {
 
     @BindView(R.id.main_share) ImageView mainShare;
@@ -44,6 +39,8 @@ public class HomePageFragment extends BaseFragment {
 
     Unbinder unbinder;
     private List<Integer> list = new ArrayList<>();
+    private GuideViewUtil mGuideViewUtil;
+
 
     @Override
     protected int getLayoutId() {
@@ -54,9 +51,15 @@ public class HomePageFragment extends BaseFragment {
     protected void initLayoutView(View view) {
         unbinder = ButterKnife.bind(this, view);
         HomePageModel.advertisement(homePageBanner, list);
+        mGuideViewUtil=new GuideViewUtil(getActivity(), R.drawable.xinshou1);
+
     }
 
-    @OnClick({R.id.main_share, R.id.home_page_banner, R.id.home_page_monitor, R.id.home_page_navigation, R.id.home_page_enclosure, R.id.home_page_record, R.id.home_page_condition, R.id.home_page_behavior, R.id.home_page_consumption, R.id.home_page_drive, R.id.home_page_query, R.id.home_page_traffic, R.id.home_page_insurance, R.id.home_page_more})
+    @OnClick({R.id.main_share, R.id.home_page_banner, R.id.home_page_monitor,
+              R.id.home_page_navigation, R.id.home_page_enclosure, R.id.home_page_record,
+              R.id.home_page_condition, R.id.home_page_behavior, R.id.home_page_consumption,
+              R.id.home_page_drive, R.id.home_page_query, R.id.home_page_traffic,
+              R.id.home_page_insurance, R.id.home_page_more})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.main_share:
@@ -95,5 +98,10 @@ public class HomePageFragment extends BaseFragment {
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        getActivity().finish();
     }
 }

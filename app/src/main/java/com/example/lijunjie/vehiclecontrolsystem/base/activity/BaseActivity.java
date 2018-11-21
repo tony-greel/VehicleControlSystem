@@ -19,7 +19,6 @@ import android.widget.EditText;
 import com.example.lijunjie.vehiclecontrolsystem.R;
 import com.example.lijunjie.vehiclecontrolsystem.base.interfaces.IBaseActivity;
 import com.example.lijunjie.vehiclecontrolsystem.base.listener.OnDialogClickListener;
-import com.example.lijunjie.vehiclecontrolsystem.base.view.CommonDialog;
 import com.example.lijunjie.vehiclecontrolsystem.base.view.LoadingDialog;
 
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener,
@@ -204,41 +203,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         }
     }
 
-    @Override
-    public void showTipDialog(String content) {
-        showTipDialog(getString(R.string.tip),content);
-    }
 
-    @Override
-    public void showTipDialog(String title, String content) {
-        new CommonDialog.Builder(this)
-                .setTitle(title)
-                .setContent(content)
-                .setPositiveName(getString(R.string.confirm))
-                .setNegativeName(getString(R.string.cancel))
-                .setDialogClickListener(this)
-                .createAndShow();
-    }
-
-    @Override
-    public void showConfirmDialog(String content) {
-        new CommonDialog.Builder(this)
-                .setTitle(getString(R.string.tip))
-                .setContent(content)
-                .setPositiveName(getString(R.string.confirm))
-                .setDialogClickListener(this)
-                .createAndShow();
-    }
-
-    @Override
-    public void showCancelDialog(String content) {
-        new CommonDialog.Builder(this)
-                .setTitle(getString(R.string.tip))
-                .setContent(content)
-                .setNegativeName(getString(R.string.cancel))
-                .setDialogClickListener(this)
-                .createAndShow();
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
